@@ -1,4 +1,5 @@
-==devServer==
+==本机介绍css压缩-=======
+
 webpack需要引入的包
 npm i -D webpack webpack-cli 
 css需要引入的包:
@@ -16,3 +17,17 @@ npm i -D html-loader
 ==devServer 热加载======
 一定要全局安装，否则启动报错
 npm i -g webpack-dev-server 
+========提取多个css文件到一个单独的的css文件===========
+npm i -D mini-css-extract-plugin
+==============css兼容性============================
+npm i -D postcss-loader postcss-preset-env
+=============压缩css==============
+npm i -D optimize-css-assets-webpack-plugin
+
+
+
+==生产环境的操作====
+
+1. 将css代码从js中提取出来
+2. 将js文件进行压缩
+3. js的兼容性
