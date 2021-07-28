@@ -1,4 +1,4 @@
-==本机介绍eslint语法检查-=======
+===externals 将某些包排除===
 
 webpack需要引入的包
 npm i -D webpack webpack-cli 
@@ -19,26 +19,8 @@ npm i -D html-loader
 npm i -g webpack-dev-server 
 ========提取多个css文件到一个单独的的css文件===========
 npm i -D mini-css-extract-plugin
-==============css兼容性============================
-npm i -D postcss-loader postcss-preset-env
-=============压缩css==============
-npm i -D optimize-css-assets-webpack-plugin
-===============eslint===============
-npm i -D eslint-loader eslint
-==============eslint airbnb检查规则
-npm i -D eslint-config-airbnb-base eslint-plugin-import
 
 ==生产环境的操作====
-
 1. 将css代码从js中提取出来
 2. 将js文件进行压缩
 3. js的兼容性
-
-=====eslint如何支持浏览器全局变量===
-"eslintConfig": {
-    "extends": "airbnb-base",
-    "env":{
-      "browser": true, /*支持浏览器的全局变量*/
-      "node": true /*支持node的全局变量*/
-    }
-  }

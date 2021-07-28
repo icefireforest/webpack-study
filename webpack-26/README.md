@@ -1,4 +1,4 @@
-==本机介绍eslint语法检查-=======
+==多进程打包 thread-loader=======
 
 webpack需要引入的包
 npm i -D webpack webpack-cli 
@@ -27,18 +27,24 @@ npm i -D optimize-css-assets-webpack-plugin
 npm i -D eslint-loader eslint
 ==============eslint airbnb检查规则
 npm i -D eslint-config-airbnb-base eslint-plugin-import
+===========js兼容性处理========
+npm i -D @babel/core babel-loader  @babel/preset-env
+npm i -D @babel/polyfill
+npm i -D core-js
+
+===========js压缩==========
+将mode改为production
+============html压缩========
+minify: {
+				//删除空格
+				collapseWhitespace: true,
+				//删除注释
+				removeComments: true
+			}
+ ============生产环境webpack配置========           
 
 ==生产环境的操作====
 
 1. 将css代码从js中提取出来
 2. 将js文件进行压缩
 3. js的兼容性
-
-=====eslint如何支持浏览器全局变量===
-"eslintConfig": {
-    "extends": "airbnb-base",
-    "env":{
-      "browser": true, /*支持浏览器的全局变量*/
-      "node": true /*支持node的全局变量*/
-    }
-  }
